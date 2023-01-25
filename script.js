@@ -3,6 +3,7 @@ function getComputerChoice(){
     return choice[ Math.floor(Math.random() * [choice.length])] ;
 };
 function playRound(playerSelection,computerSelection){ 
+    computerSelection = getComputerChoice();
  if(playerSelection="rock"){
     switch(computerSelection){
         case "Paper":
@@ -10,9 +11,8 @@ function playRound(playerSelection,computerSelection){
         break;
         case "Scissors":
         return "You win! Rock beats Scissors!"
-        break;
-        default:
-            return "Draw!"
+        break;default:
+        return "Draw!"
     }}
     if(playerSelection="paper"){
         switch(computerSelection){
@@ -23,7 +23,7 @@ function playRound(playerSelection,computerSelection){
             return "You win! Paper beats Rock!"
             break;
             default:
-                return "Draw!"
+                    return "Draw!"
         }}
         if(playerSelection="scissors"){
             switch(computerSelection){
@@ -36,7 +36,10 @@ function playRound(playerSelection,computerSelection){
                 default:
                     return "Draw!"
             }}
- };
+};
+
+ 
 const playerSelection = "rock";
-const computerSelection = getComputerChoice();
+let computerSelection;
+
 
