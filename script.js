@@ -1,6 +1,6 @@
-const game = ["Rock","Paper","Scissors"];
+const choice = ["Rock","Paper","Scissors"];
 function getComputerChoice(){
-    return game[ Math.floor(Math.random() * game.length)] ;
+    return choice[ Math.floor(Math.random() * [choice.length])] ;
 };
 function playRound(playerSelection,computerSelection){ 
  if(playerSelection="rock"){
@@ -11,6 +11,8 @@ function playRound(playerSelection,computerSelection){
         case "Scissors":
         return "You win! Rock beats Scissors!"
         break;
+        default:
+            return "Draw!"
     }}
     if(playerSelection="paper"){
         switch(computerSelection){
@@ -20,6 +22,8 @@ function playRound(playerSelection,computerSelection){
             case "Rock":
             return "You win! Paper beats Rock!"
             break;
+            default:
+                return "Draw!"
         }}
         if(playerSelection="scissors"){
             switch(computerSelection){
