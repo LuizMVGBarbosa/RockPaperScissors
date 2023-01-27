@@ -37,9 +37,22 @@ function playRound(playerSelection,computerSelection){
                     return "Draw!"
             }}
 };
+function game(){
+    for(i=0;i<=5;i++){
+    let score=playRound()
+    playRound()
+    if (score=="You win! Rock beats Scissors!"||score=="You win! Paper beats Rock!"||score=="You win! Scissors beats Paper!"){
+        hscore++
+    };
+    if(score=="You lose! Paper beats rock!"||score=="You lose! Scissors beats Paper!"||score=="You lose! Rock beats Scissors!"){
+        pcscore++
+    }
+     
+}}
 
  
 const playerSelection = "rock";
 let computerSelection;
-
+let hscore=0;
+let pcscore=0;
 
