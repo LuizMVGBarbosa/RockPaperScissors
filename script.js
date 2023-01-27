@@ -4,7 +4,7 @@ function getComputerChoice(){
 };
 function playRound(playerSelection,computerSelection){ 
     computerSelection = getComputerChoice();
- if(playerSelection="rock"){
+ if(playerSelection=="rock"){
     switch(computerSelection){
         case "Paper":
         return "You lose! Paper beats rock!"
@@ -14,7 +14,7 @@ function playRound(playerSelection,computerSelection){
         break;default:
         return "Draw!"
     }}
-    if(playerSelection="paper"){
+    if(playerSelection=="paper"){
         switch(computerSelection){
             case "Scissors":
             return "You lose! Scissors beats Paper!"
@@ -25,7 +25,7 @@ function playRound(playerSelection,computerSelection){
             default:
                     return "Draw!"
         }}
-        if(playerSelection="scissors"){
+        if(playerSelection=="scissors"){
             switch(computerSelection){
                 case "Rock":
                 return "You lose! Rock beats Scissors!"
@@ -38,20 +38,27 @@ function playRound(playerSelection,computerSelection){
             }}
 };
 function game(){
-    for(i=0;i<=5;i++){
-    let score=playRound()
-    playRound()
+    let score=playRound(playerSelection,computerSelection)
+    playRound(playerSelection,computerSelection)
     if (score=="You win! Rock beats Scissors!"||score=="You win! Paper beats Rock!"||score=="You win! Scissors beats Paper!"){
-        hscore++
+        hscore++ 
     };
     if(score=="You lose! Paper beats rock!"||score=="You lose! Scissors beats Paper!"||score=="You lose! Rock beats Scissors!"){
-        pcscore++
-    }
-     
-}}
+        pcscore++ 
+    } 
+    round++;
+    alert(score);
+    if(round==5&pcscore<hscore){ alert("You won!Congratulations!!!")}
+    if(round==5&hscore<pcscore){   alert("You lose!PC RULES!!!")}
+    if(round==5&pcscore==hscore){alert("Draw Game!!!")}
+}
 
- 
-const playerSelection = "rock";
+function start(){
+      playerSelection = document.getElementById("Pchoice").value;
+     game()
+     }
+let round=0
+let playerSelection;
 let computerSelection;
 let hscore=0;
 let pcscore=0;
