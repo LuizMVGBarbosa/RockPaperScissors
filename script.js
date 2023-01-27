@@ -1,8 +1,9 @@
-const choice = ["Rock","Paper","Scissors"];
+
 function getComputerChoice(){
     return choice[ Math.floor(Math.random() * [choice.length])] ;
 };
 function playRound(playerSelection,computerSelection){ 
+    playerSelection=playerSelection.toLowerCase();
     computerSelection = getComputerChoice();
  if(playerSelection=="rock"){
     switch(computerSelection){
@@ -39,7 +40,6 @@ function playRound(playerSelection,computerSelection){
 };
 function game(){
     let score=playRound(playerSelection,computerSelection)
-    playRound(playerSelection,computerSelection)
     if (score=="You win! Rock beats Scissors!"||score=="You win! Paper beats Rock!"||score=="You win! Scissors beats Paper!"){
         hscore++ 
     };
@@ -57,6 +57,7 @@ function start(){
       playerSelection = document.getElementById("Pchoice").value;
      game()
      }
+const choice = ["Rock","Paper","Scissors"];
 let round=0
 let playerSelection;
 let computerSelection;
