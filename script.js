@@ -46,40 +46,60 @@ function game(){
     let score=playRound(playerSelection,computerSelection)
     switch(score){
         case "You win! Rock beats Scissors!":
-         hScore++
+         hScore++ 
+         results.style.backgroundColor='green'
          break;
          case "You win! Paper beats Rock!":
-         hScore++
+         hScore++ 
+         results.style.backgroundColor='green'
          break;
          case "You win! Scissors beats Paper!":
-         hScore++
+         hScore++ 
+         results.style.backgroundColor='green'
          break;
          case "You lose! Paper beats rock!":
          pcScore++
+         results.style.backgroundColor='red'
          break;
          case "You lose! Scissors beats Paper!":
          pcScore++
+         results.style.backgroundColor='red'
          break;
          case "You lose! Rock beats Scissors!":
          pcScore++
+         results.style.backgroundColor='red'
          break;
          default:
            tie++
+           results.style.backgroundColor='yellow'
            break;
       }
     round++;
-    alert(score);
-    if(round==5&pcScore<hScore){ alert("You won!Congratulations!!!")}
-    if(round==5&hScore<pcScore){   alert("You lose!PC RULES!!!")}
-    if(round==5&pcScore==hScore){alert("Draw Game!!!")}
-}
+    results.textContent=score ;
+    if(round==5&pcScore<hScore){
+     finalresult.textContent="You won!Congratulations!!!" 
+     finalresult.style.backgroundColor='green'
+     results.textContent=":)"
+     results.style.backgroundColor='green'}
+    if(round==5&hScore<pcScore){
+     finalresult.textContent="You lose!PC RULES!!!" 
+     finalresult.style.backgroundColor='red'
+     results.textContent=":("
+     results.style.backgroundColor='red'}
+    if(round==5&pcScore==hScore){
+     finalresult.textContent="Draw Game!!!" 
+     finalresult.style.backgroundColor='yellow'
+     results.textContent=";|"
+     results.style.backgroundColor='yellow' }
+};
 
 
 
 function start(){
       playerSelection = document.getElementById("Pchoice").value;
-     game()
-     }
+     game();
+     hud.textContent= "  Wins: "+ hScore + "   Losses: "  +pcScore +  "    Ties:" + tie;
+     };
 
 
 const choice = ["Rock","Paper","Scissors"];
@@ -89,3 +109,6 @@ let computerSelection;
 let hScore=0;
 let pcScore=0;
 let tie=0
+let results = document.querySelector('.result')
+let hud= document.querySelector('.hud')
+let finalresult= document.querySelector('.finalresult')
