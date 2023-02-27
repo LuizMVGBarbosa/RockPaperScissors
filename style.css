@@ -1,0 +1,173 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: url(images/patternpad.png);
+}
+.game{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.human{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 600px;
+    height:700px;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 50px;
+    color: black;
+    background-color: white;
+}
+.man{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.smokingGuy{
+    border: 5px dotted rgb(236, 236, 47);  
+    border-radius: 20px;
+    width:200px;
+}
+.Choices{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.rock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    border: 5px solid black;
+    border-radius: 30px;
+}
+.Choices .rock:hover{
+ border-color: rgb(236, 236, 47);  
+}
+.paper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+.Choices .paper:hover{
+    border-color:rgb(236, 236, 47);  
+}
+.scissors{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+.Choices .scissors:hover{
+    border-color: rgb(236, 236, 47);  
+}
+.hud{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: bold;
+    width: 150px;
+    height: 700px;
+    font-size: 30px;
+}
+.Computer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 600px;
+    height:700px;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 50px;
+    color: black;
+    background-color: white;
+}
+.Machine{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+}
+.Robot{
+    border: 5px dotted  rgb(153, 29, 153);
+    border-radius: 20px;
+    width: 200px;
+}
+
+.Rchoice{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;}
+h1{
+    font-size: 70px;
+    margin: 0 auto 0 auto;
+}
+h2{
+    font-size:70px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+} 
+h3{
+    display:flex;
+    align-self: center;
+}
+
+.choosed{
+    background-color: rgb(236, 236, 47);  
+    border-color: rgb(236, 236, 47);  
+}
+.Rchoosed{
+    background-color: rgb(153, 29, 153);
+    border-color:  rgb(153, 29, 153);
+}
+.winner{
+    background-color: green;
+    border-color: green;
+    border-style: solid;
+}
+.looser{
+    background-color: red;
+    border-color:  red;
+    border-style: solid;
+}
+.tie{
+    background-color: orangered;
+    border-color: orangered;
+    border-style: solid;
+}
+.reStyle{
+    display: flex;
+    flex-wrap: nowrap;
+    align-self: center;
+    text-align: center;
+    width: 200px;
+    font-size: 50px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+.reStyle:hover{
+    background-color: rgb(236, 236, 47);
+    border-color: rgb(236, 236, 47);
+}
