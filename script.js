@@ -9,43 +9,43 @@ function playRound(playerSelection,computerSelection){
  if(playerSelection=="rock"){
     switch(computerSelection){
         case "Paper":
-            Rchoice.children[1].classList.add('Rchoosed');  
+            Rchoice.children[1].classList.add('Rchose');  
         return "lose!"
         break;
         case "Scissors":
-            Rchoice.children[2].classList.add('Rchoosed');
+            Rchoice.children[2].classList.add('Rchose');
         return "win!"
         break;
         default:
-            Rchoice.children[0].classList.add('Rchoosed');   
+            Rchoice.children[0].classList.add('Rchose');   
         return "Draw!"
     }}
     if(playerSelection=="paper"){
         switch(computerSelection){
             case "Scissors":
-                Rchoice.children[2].classList.add('Rchoosed');
+                Rchoice.children[2].classList.add('Rchose');
             return "lose!"
             break;
             case "Rock":
-            Rchoice.children[0].classList.add('Rchoosed');         
+            Rchoice.children[0].classList.add('Rchose');         
             return "win!"
             break;
             default:
-                Rchoice.children[1].classList.add('Rchoosed');
+                Rchoice.children[1].classList.add('Rchose');
                     return "Draw!"
         }}
         if(playerSelection=="scissors"){
             switch(computerSelection){
                 case "Rock":
-                    Rchoice.children[0].classList.add('Rchoosed');    
+                    Rchoice.children[0].classList.add('Rchose');    
                 return "lose!"
                 break;
                 case "Paper":
-                    Rchoice.children[1].classList.add('Rchoosed');
+                    Rchoice.children[1].classList.add('Rchose');
                 return "win!"
                 break;
                 default:
-                    Rchoice.children[2].classList.add('Rchoosed');
+                    Rchoice.children[2].classList.add('Rchose');
                     return "Draw!"
                 }
 };}
@@ -107,21 +107,21 @@ const rock = document.querySelector('.rock');
 
 rock.addEventListener('click',playrock);
 function playrock(){
-    rock.classList.add('choosed');
+    rock.classList.add('chose');
   game(playerSelection='rock');
 }
 
 const paper = document.querySelector('.paper')
 paper.addEventListener('click',playpaper);
 function playpaper(){
-    paper.classList.add('choosed');
+    paper.classList.add('chose');
    game(playerSelection='paper');
 }
 
 const scissors = document.querySelector('.scissors')
 scissors.addEventListener('click',playscissors);
 function playscissors(){
-    scissors.classList.add('choosed');
+    scissors.classList.add('chose');
 game(playerSelection='scissors');
 }
 const robot = document.querySelector('.Robot');
@@ -135,12 +135,12 @@ function playsound(name){
     setTimeout(() => {
       guy.classList.remove( 'winner', 'looser', 'tie');
       robot.classList.remove( 'winner', 'looser', 'tie');
-      rock.classList.remove('choosed');
-      paper.classList.remove('choosed');
-      scissors.classList.remove('choosed');
-      Rchoice.children[0].classList.remove('Rchoosed');
-      Rchoice.children[1].classList.remove('Rchoosed');
-      Rchoice.children[2].classList.remove('Rchoosed');
+      rock.classList.remove('chose');
+      paper.classList.remove('chose');
+      scissors.classList.remove('chose');
+      Rchoice.children[0].classList.remove('Rchose');
+      Rchoice.children[1].classList.remove('Rchose');
+      Rchoice.children[2].classList.remove('Rchose');
     }, 3000);
     if(round==5){
         endGame()
